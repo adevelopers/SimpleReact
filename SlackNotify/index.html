@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Slack Notificator</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script src="noty.js" ></script>
+  </head>
+  <body>
+      <script>
+        var messages = [
+          "Hi",
+          "What did you do yesterday?",
+          "What do you plan on doing today?",
+          "Is there anything standing in your way?"
+        ];
+        var key;
+        for (key  in messages) {
+          slackNotify({text: messages[key] });
+          sleep(5000);
+        }
+      </script>
+  </body>
+</html>
